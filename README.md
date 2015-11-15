@@ -2,8 +2,18 @@
 Android app 
 
 # About
-SwapSkill is an app that lets users exchange items and do each other's tasks at the click of a button.
-Users Sign up via Facebook or Twitter and fill their profile.
+Swap lets users do each other's task and exchange stuff in a fun way. 
+Users can do each other's assignments or carry out physical tasks on behalf of other people.
+Users in one location can exchange Games, Movies plus more..
+
+A "handshake" is the binding feature in the app. 
+
+# Handshake
+From a list of available Tasks, a user can "TAP" on one -> to open an activity with more info about the task -> At the bottom is a handshake icon which the user taps to send handshake(this means a person is ready to do the task)-> Task owner receives a handshake request notification -> Tapping back means they've accepted to have their task done by the first user -> The two users will then exchange contacts (email address + phone number should do). 
+
+
+# Target 
+Students are the primary target but everyone is free to use.
 Once profile is complete, they'll fill in all the skills they possess and wanna share with world.
 Users can add items they wish to exchange to their inventory . 
 
