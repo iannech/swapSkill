@@ -24,4 +24,10 @@ Once a user has completed their profile setup, they immediately gain access to t
 	- They can Search for people - Trying to access people's profile is only possible if they are around your location(not sure of this yet).
 	- Shake hands to do a task/request an exchange of an item.
 	- Accept a Handshake for someone to do your task/exchange item . 
+# Requirements
+	1. User login(Oauth) - Facebook, Twitter.[AMAZON COGNITO]
+	2. Store and sync user data - user details, item images, profile pics[AMAZON S3]
+	3. Backend logic[AWS LAMBDA].
+	4. Location aware - show tasks around user location ?? - not a must
+	5. Push notification - app send notification to all users[AMAZON SNS]
 
