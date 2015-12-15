@@ -25,6 +25,8 @@ User can edit their profile any time.
 A "handshake" is the binding feature in the app. 
 From a list of available Tasks, a user can "TAP" on one -> to open an activity with more info about the task -> At the bottom is a handshake icon which the user taps to send handshake(this means a person is ready to do the task)-> Task owner receives a handshake request notification -> Tapping back means they've accepted to have their task done by the first user -> The two users will then exchange contacts (email address + phone number should do). 
 
+# Leader Board
+Ranks the people who have completed the most tasks. Design issues: location aware or not?
 
 # Target 
 Students are the primary target but everyone is free to use.
