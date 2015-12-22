@@ -14,6 +14,8 @@ Swap uses oped id signup service from facebook. Users can therefore sign up via 
 Signing up allows users to - Add skills (for easy filtering of tasks).
                            - Add Items to the Swap Inventory (These are items they want to exchange).
                            
+## Friends or contacts?
+It is vital to decide whether a users contactlist will be used in creating a following(relations) or the app will pull the user's friends from facebook and followers from twitter. [UNDECIDED]
 ## Adding Skills
 A checklist of skills is provided for user to check as much as possible. An "other" button exists for manual entry of skills not featured in the list. These are saved to user profile.
 ## Adding Item
