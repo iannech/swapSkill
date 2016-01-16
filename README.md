@@ -5,14 +5,16 @@ Android app
 Swap lets users do each other's task and exchange stuff in a fun way. 
 Users can do each other's assignments or carry out physical tasks on behalf of other people.
 Users in one location can exchange Games, Movies plus more..
+Users can also swap skills and items for cash, depending on how the parties reach an understanding.
 
 # Profile Set up
 ##Signing Up
-Swap uses oped id signup service from facebook. Users can therefore sign up via facebook.
+Swap uses oauth from facebook and twitter. Users can therefore sign up via facebook.
 
 ## Why sign up?
 Signing up allows users to - Add skills (for easy filtering of tasks).
                            - Add Items to the Swap Inventory (These are items they want to exchange).
+                           - Add their Contacts information. Personal contacts remain private until when two parties exchange   contacts.
                            
 ## Friends or contacts?
 It is vital to decide whether a users contactlist will be used in creating a following(relations) or the app will pull the user's friends from facebook and followers from twitter. [UNDECIDED]
@@ -42,6 +44,14 @@ Once a user has completed their profile setup, they immediately gain access to t
 	- They can Search for people - Trying to access people's profile is only possible if they are around your location(not sure of this yet).
 	- Shake hands to do a task/request an exchange of an item.
 	- Accept a Handshake for someone to do your task/exchange item . 
+
+# List of Activities in the App
+1. Tasks fragment activity
+2. Inventory fragment activity(Not really necessary as item exchange can be uploaded as a task)
+3. Profile fragment activity.
+4. Settings Activity.
+5. Handshakes tab activity
+                     
 # Requirements
 	1. User login(Oauth) - Facebook, Twitter.[AMAZON COGNITO]
 	2. Store and sync user data - user details, item images, profile pics[AMAZON S3]
