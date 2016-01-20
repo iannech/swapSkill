@@ -12,18 +12,22 @@ Users can also swap skills and items for cash, depending on how the parties reac
 Swap uses oauth from facebook and twitter. Users can therefore sign up via facebook.
 
 ## Why sign up?
-Signing up allows users to - Add skills (for easy filtering of tasks).
-                           - Add Items to the Swap Inventory (These are items they want to exchange).
-                           - Add their Contacts information. Personal contacts remain private until when two parties exchange   contacts.
+Signing up allows users to:
+
+- Add skills (for easy filtering of tasks).
+- Add their Contacts information. Personal contacts remain private until when two parties "shake hands".
                            
 ## Friends or contacts?
-It is vital to decide whether a users contactlist will be used in creating a following(relations) or the app will pull the user's friends from facebook and followers from twitter. [UNDECIDED]
+It is vital to decide whether a users contactlist will be used in creating a following(relations) or the app will pull the user's friends from facebook and followers from twitter. [NO NEED]
+
 ## Adding Skills
 A checklist of skills is provided for user to check as much as possible. An "other" button exists for manual entry of skills not featured in the list. These are saved to user profile.
+
 ## Adding Item
-An "Add" button exists in the inventory. Tapping the button allows user to add new item for exchange. Parameters [Image of item, Name, Some description]. These are saved as user data on the cloud. A cache of the media files can be made on local storage of the user.
+No Need to Have an Inventory - What happens is that a user posts the item to exchange normally they as the way they post a task to be done for them. Except...they upload a picture of the item too.
+
 ## Editing profile
-User can edit their profile any time. 
+User can edit their profile any time. Change Username, Edit skills, etc.
 
 # Handshake
 A "handshake" is the binding feature in the app. 
@@ -35,7 +39,7 @@ Ranks the people who have completed the most tasks. Design issues: location awar
 # Target 
 Students are the primary target but everyone is free to use.
 Once profile is complete, they'll fill in all the skills they possess and wanna share with world.
-Users can add items they wish to exchange to their inventory . 
+
 
 Once a user has completed their profile setup, they immediately gain access to the swapSkill platform:-
 	- They can see tasks/assignments that people in their location want done
