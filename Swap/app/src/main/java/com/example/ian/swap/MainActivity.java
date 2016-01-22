@@ -1,13 +1,17 @@
 package com.example.ian.swap;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -19,6 +23,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private DrawerLayout mDrawer;
+    private NavigationView nvDrawer;
+
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -28,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        // find our drawer view
+        nvDrawer = (NavigationView)findViewById(R.id.nvView);
+
+        // set up drawer view
+        setupDrawerContent(nvDrawer);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         viewPager = (ViewPager)findViewById(R.id.viewpager);
@@ -47,6 +62,53 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void setupDrawerContent(NavigationView navigationView){
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem item) {
+                        return true;
+                    }
+                }
+        );
+    }
+
+    public void selectDrawerItem(MenuItem menuItem){
+        // Create a new fragment and specify the planet to show based on
+        // position
+        Fragment fragment = null;
+
+        Class fragmentClass;
+        switch(menuItem.getItemId()) {
+            case R.id.nav_skills_fragment:
+                fragmentClass = InventoryFragment.class;
+                break;
+            case R.id.nav_friends_fragment:
+                fragmentClass = TasksFragment.class;
+                break;
+            case R.id.nav_inventory_fragment:
+                fragmentClass = InventoryFragment.class;
+                break;
+            default:
+                fragmentClass = TasksFragment.class;
+        }
+
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+        // Highlight the selected item, update the title, and close the drawer
+        menuItem.setChecked(true);
+        setTitle(menuItem.getTitle());
+        mDrawer.closeDrawers();
     }
 
     private void setUpViewPager(ViewPager viewPager){
@@ -106,7 +168,15 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        else if(id == android.R.id.home){
+            mDrawer.openDrawer(GravityCompat.START);
+        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
     }
 }

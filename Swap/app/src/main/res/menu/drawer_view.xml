@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_skills_fragment"
+            android:icon="@drawable/ic_build_black_24dp"
+            android:title="Skills" />
+        <item
+            android:id="@+id/nav_friends_fragment"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_inventory_fragment"
+            android:icon="@drawable/ic_shopping_basket_black_24dp"
+            android:title="Items"/>
+        <item android:title="Sub items">
+            <menu>
+                <item
+                    android:icon="@drawable/ic_settings_black_24dp"
+                    android:title="Setting"/>
+                <item
+                    android:icon="@drawable/ic_people_black_24dp"
+                    android:title="About"/>
+            </menu>
+        </item>
+
+    </group>
+</menu>
